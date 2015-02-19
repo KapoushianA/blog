@@ -9,6 +9,7 @@
     $password = "root";
     $database = "blog_db";
     
+    // if its not set you connect to a new database if it is you join a session//
     if(!isset($_SESSION["connection"])) {
         $connection = new Database($host, $username, $password, $database);
         $_SESSION["connection"] = $connection;
