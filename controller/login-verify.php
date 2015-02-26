@@ -5,6 +5,7 @@
       if(!isset($_SESSION["authenticated"])) {
           return false;
       }  
+      //if session authenticated is true its false///
       else {
           if($_SESSION["authenticated"] != true) {
               return false;

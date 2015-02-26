@@ -3,6 +3,7 @@
     session_start();
     session_regenerate_id(true);
     
+    //this is where it takes me when i run my blog//
     $path = "/armen-blog/";
     
     $host = "localhost";

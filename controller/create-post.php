@@ -6,6 +6,7 @@
 
     $query = $_SESSION["connection"]->query("INSERT INTO posts SET title = '$title', post = '$post'");
     
+    //if query = session connection this scho will pop up//
     if($query) {
         echo "<p>Successfully inserted post: $title</p>";
     }

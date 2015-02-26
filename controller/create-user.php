@@ -6,7 +6,7 @@
     $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);
     
     $salt = "$$$" . "rounds=5000$" . uniqid(mt_rand(), true) . "$";
-    
+ 
     $hashedPassword = crypt($password, $salt);
     
     $query = $_SESSION["connection"]->query("INSERT INTO users SET "
@@ -15,6 +15,7 @@
             . "password = '$hashedPassword',"
             . "salt = '$salt'");
     
+    //query equals session it will say if its a success or failure//
     if($query) {
         echo "Successfully created user: $username";
     }

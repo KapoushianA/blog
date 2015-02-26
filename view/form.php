@@ -2,6 +2,7 @@
     require_once(__DIR__ . "/../model/config.php");
     require_once(__DIR__ . "/../controller/login-verify.php");
     
+    //if the user is aunthenticated the header path goes to index//
     if(authenticateUser()) {
         header("Location: " . $path . "index.php");
         die();
@@ -20,7 +21,7 @@
         <label for="post">Post: </label>
         <textarea name="post"></textarea>
     </div>
-    
+
     <div>
         <button type="submit">Submit</button>
     </div>
